@@ -5,10 +5,11 @@
 //  vince chi ha azzeccato la parità/disparità della somma dei due numeri
 
 let pariDispari = document.getElementById('primascelta').value;
+// creo una variabile e gli do come assegnazione il risultato della prima scelta dell'utente tra pari e dispari
 
 let gioca = document.getElementById ('launch');
 gioca.addEventListener ('click',function(){
-
+// creo un evento click che scatenerà tutte le istruzioni qui sotto
     let sceltaNumero = parseInt(document.getElementById('numero').value);
     console.log(sceltaNumero, typeof sceltaNumero)
 
@@ -32,7 +33,7 @@ gioca.addEventListener ('click',function(){
 function somma (risultatoUtente, risultoCpu){
     return risultatoUtente + risultoCpu;
 }
-
+// prima funzione mi serve ad addizzionare il numero inserito dall' utente e quello generato dall funzione creata qui sotto e mi ritorna sotto forma di somma
 function numeroCpu (min, max){
     return Math.floor(Math.random() * ( max - min + 1) + min);
 }
